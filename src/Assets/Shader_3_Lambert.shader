@@ -47,7 +47,7 @@ Shader "Custom/Shader_3_Lambert"
             {
                 Light light = GetMainLight();
                 half3 color = light.color * _BaseColor.rgb * max(0, dot(IN.normal, light.direction));
-//                half3 color = _BaseColor.rgb * LightingLambert(light.color, light.direction, IN.normal);
+ //               half3 color = _BaseColor.rgb * LightingLambert(light.color, light.direction, IN.normal);
                 return half4(color, 1);
             }
             ENDHLSL
